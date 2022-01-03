@@ -2,4 +2,7 @@
 
 I am adding daily 1 JavaScript solution to improve my skill 📟
 
-<b>⌛️ Day 01</b> Reverse String Value
+<ul>
+    <li>⌛️ Day 01: Reverse String Value</li>
+    <li>⌛️ Day 02: compair 2 Object</li>
+</ul>
