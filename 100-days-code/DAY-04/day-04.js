@@ -10,12 +10,9 @@ const addNewString01 = (str) => {
   return newString;
 };
 // Solution 02
-const addNewString01 = () => (str.indexOf("!New") < 0 ? `!New ${str}` : str);
+const addNewString02 = (str) => (str.indexOf("!New") < 0 ? `!New ${str}` : str);
 
-// Solution 02
-const addNewString01 = () => (str.includes("!New") ? `!New ${str}` : str);
-
-// Solution 02
+// Solution 03
 const addNewString03 = (str) => (str.includes("!New") ? str : `!New ${str}`);
 
 console.log(addNewString01("Offers"));
