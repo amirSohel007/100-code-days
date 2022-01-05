@@ -17,7 +17,7 @@ const uniqueValueArray02 = (arr) => {
 };
 
 // Solution 03
-const uniqueValueArray03 = (arr) => (uniqueArr = [...new Set(arr)]);
+const uniqueValueArray03 = (arr) => ([...new Set(arr)]);
 
 // Solution 04
 const uniqueValueArray04 = (arr) =>
