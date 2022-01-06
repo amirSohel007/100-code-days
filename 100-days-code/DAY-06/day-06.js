@@ -10,6 +10,24 @@ const findLargetNumber01 = (arr) => {
 
 // Solution 02
 const findLargetNumber02 = (arr) => {
+  let largetValue = 0;
+  for (let i in arr) arr[i] > largetValue ? (largetValue = arr[i]) : "";
+  arr[arr.indexOf(largetValue)] = largetValue + 100;
+  return arr;
+};
+
+// Solution 03
+const findLargetNumber03 = (arr) => {
+  const largetValue = arr.reduce(
+    (acc, curr) => (curr > acc ? (acc = curr) : acc),
+    0
+  );
+  arr[arr.indexOf(largetValue)] = largetValue + 100;
+  return arr;
+};
+
+// Solution 04
+const findLargetNumber04 = (arr) => {
   const largetValue = Math.max(...arr);
   // now find the index of larget value
   const largetValueIndex = arr.indexOf(largetValue);
