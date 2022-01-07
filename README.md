@@ -1,6 +1,6 @@
 <h5>#100-code-days 🕰</h5>
 
-I am adding daily 1 JavaScript solution to improve my skill 📟
+I am adding daily 1 JavaScript solution here 📟
 
 <ul>
     <li>⌛️ Day 01: Reverse String Value</li>
