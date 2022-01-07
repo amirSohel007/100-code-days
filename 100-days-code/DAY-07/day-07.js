@@ -19,6 +19,15 @@ const uniqueObject02 = (dataCollection) => {
   return finalObject;
 };
 
+// Solution 03
+const uniqueObject03 = (dataCollection) => {
+  const finalObject = dataCollection.reduce(function (acc, curr) {
+    acc[curr.age] ? (acc[curr.age] = ++acc[curr.age]) : (acc[curr.age] = 1);
+    return acc;
+  }, {});
+  return finalObject;
+};
+
 console.log(
   uniqueObject03([
     { name: "abc", age: 20 },
