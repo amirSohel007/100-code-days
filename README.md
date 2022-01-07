@@ -9,4 +9,5 @@ I am adding daily 1 JavaScript solution to improve my skill 📟
     <li>⌛️ Day 04: Add !New in given string</li>
     <li>⌛️ Day 05: Check two numbers for 100</li>
     <li>⌛️ Day 06: Find largest number in Array</li>
+    <li>⌛️ Day 07: Return a single Object</li>
 </ul>
