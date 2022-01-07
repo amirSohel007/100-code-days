@@ -9,6 +9,16 @@ const uniqueObject01 = (dataCollection) => {
   return finalObject;
 };
 
+// Solution 02
+const uniqueObject02 = (dataCollection) => {
+  const finalObject = {};
+  for (let i of dataCollection) {
+    if (finalObject[i.age]) finalObject[i.age] = ++finalObject[i.age];
+    else finalObject[i.age] = 1;
+  }
+  return finalObject;
+};
+
 console.log(
   uniqueObject03([
     { name: "abc", age: 20 },
