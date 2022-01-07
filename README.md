@@ -1,6 +1,6 @@
 <h5>#100-code-days 🕰</h5>
 
-I am adding daily 1 JavaScript solution here 📟
+I am adding daily 1 JavaScript solution here 📟 and you can fork the repo for add your solution for any specific probelm 
 
 <ul>
     <li>⌛️ Day 01: Reverse String Value</li>
