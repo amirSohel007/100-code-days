@@ -1,7 +1,7 @@
 // solution 1
 const swipeObject01 = (obj) => {
   const objectEntriesArray = Object.entries(obj);
-  // objectEntriesArray is now : [[key, value], [key, val], [key, val]]
+  // objectEntriesArray is now: [[key, value], [key, val], [key, val]]
   const reverseObject = [];
   for (let i = 0; i < objectEntriesArray.length; i++) {
     /*
