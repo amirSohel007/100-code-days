@@ -1,4 +1,4 @@
-// solution
+// solution 1
 const switeObject01 = (obj) => {
   const objectEntriesArray = Object.entries(obj);
   // objectEntriesArray is now : [[key, value], [key, val], [key, val]]
@@ -11,4 +11,14 @@ const switeObject01 = (obj) => {
     reverseObject.push([objectEntriesArray[i][1], objectEntriesArray[i][0]]);
   }
   return Object.fromEntries(reverseObject);
+};
+
+// solution 2
+const switeObject02 = (obj) => {
+  const objectEntriesArray = Object.entries(obj).map(([key, val]) => [
+    val,
+    key,
+  ]);
+  const finialObject = Object.fromEntries(objectEntriesArray);
+  return finialObject;
 };
