@@ -1,5 +1,5 @@
 // solution 1
-const switeObject01 = (obj) => {
+const swipeObject01 = (obj) => {
   const objectEntriesArray = Object.entries(obj);
   // objectEntriesArray is now : [[key, value], [key, val], [key, val]]
   const reverseObject = [];
@@ -14,7 +14,7 @@ const switeObject01 = (obj) => {
 };
 
 // solution 2
-const switeObject02 = (obj) => {
+const swipeObject02 = (obj) => {
   const objectEntriesArray = Object.entries(obj).map(([key, val]) => [
     val,
     key,
