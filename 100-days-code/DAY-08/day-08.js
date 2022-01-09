@@ -6,7 +6,7 @@ const swipeObject01 = (obj) => {
   for (let i = 0; i < objectEntriesArray.length; i++) {
     /*
      * reutring a new Array which contain 2 property key and value
-     * key has index 0 and value has index 0 so, swipe the index like [[0,1]]
+     * key has index 0 and value has index 1 so, swipe the index like [[1,0]]
      */
     reverseObject.push([objectEntriesArray[i][1], objectEntriesArray[i][0]]);
   }
