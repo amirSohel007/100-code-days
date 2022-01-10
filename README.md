@@ -12,4 +12,5 @@ I am adding daily 1 JavaScript solution here 📟 and you can fork the repo for 
     <li>⌛️ Day 07: Return a single Object</li>
     <li>⌛️ Day 08: Object Reverse keys</li>
     <li>⌛️ Day 09: create object with 2 differnt array</li>
+    <li>⌛️ Day 10: Convert number into binary</li>
 </ul>
