@@ -7,4 +7,8 @@ const stringToBinary01 = (string) => {
   return binaryCode.join(" ");
 };
 
+// soluton 02
+const stringToBinary02 = (string) =>
+  [...string].map((chat) => chat.charCodeAt().toString(2)).join(" ");
+
 console.log(stringToBinary01("Hello World"));
