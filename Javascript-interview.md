@@ -42,7 +42,7 @@ const memoize = (fun) => {
 }
 ```
 
-# 4. Custom polyfill methods
+# 4️⃣. Custom polyfill methods
 
 ```js
 // Pollyfill for Map
@@ -96,6 +96,30 @@ Function.prototype.myBind = function(context={}, ...args){
         return context.fun(...args, ...args2)
     }
 }
+```
+
+# 5️⃣ Custom Rerty wrapper for API Call
+
+```js
+const retryWrapper = (fun, times, delay, count=1) => {
+    return new Promise((resolve, reject) => {
+       fun(100)
+       .then(resolve)
+       .catch((err) => {
+        console.log('Retrying now', count)
+            if(count >= times){
+                new Error('Retry limit has reached')
+                return
+            }
+            setTimeout(() => {
+                retryWrapper(fun, times, delay, count+1)
+            },delay)
+       })
+    })
+}
+
+
+retryWrapper(pingAPI, 3, 1000).then((data) => console.log(data)).catch((err) => console.log(err))
 ```
 
 
