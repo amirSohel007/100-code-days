@@ -42,4 +42,60 @@ const memoize = (fun) => {
 }
 ```
 
+# 4. Custom polyfill methods
+
+```js
+// Pollyfill for Map
+Array.prototype.myMap = function (callback) {
+    const newArr = [];
+    for (let i = 0; i < this.length; i++)
+        newArr.push(callback(this[i], i, this))
+    return newArr
+}
+
+// Pollyfill for Filter
+Array.prototype.myFilter = function (callback) {
+    const newArr = [];
+    for (let i = 0; i < this.length; i++)
+        if (callback(this[i], i, this))
+            newArr.push(this[i])
+    return newArr
+}
+
+// Pollyfill for Reduce
+Array.prototype.myReduce = function (callback, initalValue) {
+    let acc = initalValue;
+    for (let i = 0; i < this.length; i++)
+        acc = acc ? callback(acc, this[i], i, this) : this[0]
+    return acc
+}
+
+// Pollyfill for Call
+Function.prototype.myCall = function (context = {}, ...args) {
+    // Error handling
+    if (typeof this !== 'function') new Error(this + 'is not callable')
+    context.fun = this;
+    context.fun(...args)
+}
+
+// Pollyfill for Apply
+Function.prototype.myApply = function (context = {}, arrayList = []) {
+    // Error handling
+    if (typeof this !== 'function') new Error(this + 'is not callable')
+    if (!Array.isArray(arrayList)) new Error(arrayList + 'is not ittriable')
+    context.fun = this;
+    context.fun(...arrayList)
+}
+
+// Pollyfill for bind
+Function.prototype.myBind = function(context={}, ...args){
+    // Error handling
+    if (typeof this !== 'function') new Error(this + 'is not callable');
+    context.fun = this
+    return function(...args2){
+        return context.fun(...args, ...args2)
+    }
+}
+```
+
 
